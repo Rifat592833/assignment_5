@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link rel="stylesheet" href="style/style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
 </head>
-<body class="bg-green-300">
+<body class="bg-[#F4F7FF]">
     <!-- Navbar start -->
     <nav class="mx-32 auto bg-white mt-5 rounded-lg mb-8">
     <div class="flex justify-between p-2">
@@ -22,9 +24,15 @@
         </div>
 
         <div class="flex">
-            <div class="bg-slate-400 h-10 w-8 rounded-lg text-center mr-2">
-                <h1 class="text-center">23</h1>
+            <div class="bg-[#F4F7FF] flex justify-evenly   h-12 w-20 rounded-lg  mr-2">
+                <div class="pt-2">
+                    <img src="assets/checkbox.png" alt="Image Not Found">
+                </div>
+                <div >
+                    <h1 class="pt-2 font-bold"><span id="totalCounter">23</span></h1>
+                </div>
             </div>
+            
             <div >
                 <button onclick="changeBackgroundColor()">
                     <img src="assets/theme-btn.png" alt="Image Not Found">
@@ -40,24 +48,57 @@
     <main>
         <!-- card container start -->
          <div class="grid grid-cols-4 gap-3 mx-32 auto pb-9">
+        
 
-            <!-- card 1 container start -->
-        <div class="col-span-3">
-            <div class="grid grid-cols-3  bg-white p-3 gap-2 rounded-xl">
+             <!-- card 1 container start -->
+             
+        <div class="col-span-3 bg-white p-3 gap-2 rounded-xl">
+            <div class="grid grid-cols-4 gap-3 mb-4">
+
+                <div class=" bg-[#F4F7FF] flex  h-20 p-4 rounded-xl">
+                    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full">
+                        <img src="assets/checkbox.png" alt="Image Not found">
+                    </div>
+                   <div class="ml-2">
+                    <p>Task assigned</p>
+                    <h1 class="pt-2 font-bold"><span id="decreasingCounter">6</span></h1>
+                   </div>
+                </div>
+
+                <div class="col-span-2 bg-gradient-to-r from-[rgb(55,82,253)] via-[rgb(108,127,250)] to-[rgb(155,168,248)] flex justify-evenly rounded-xl">
+                    <img src="assets/board.png" alt="Image Not found">
+                    <div class="pt-3">
+                        <p>Discover Something <br>New Today!</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F4F7FF] flex items-center justify-center rounded-xl"> 
+                    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full">
+                        <img src="assets/calender.png" alt="Image Not found">
+                    </div>
+
+                    <div class="ml-2">
+                        <p>wed,<br>july-28-2015</p>
+                    </div>
+                </div>
+              
+            </div>
+            
+            <div class="grid grid-cols-3 gap-3 ">
                 <!-- card 1 start --> 
-                <div class="bg-green-300 rounded-xl p-2 ">
+                <div class="bg-[#F4F7FF] rounded-xl p-2 ">
                     <h3 class="bg-white h-6 w-32 rounded-xl text-center mb-4">ShopEase</h3>
                     <h1 class="mb-4">Fix Mobile Button Issue </h1>
                     <p class="mb-4 bg-white w-3/4 rounded-xl p-2">Debug using Chrome DevTools, check for overlapping </p><br>
-                    <div class="flex justify-between">
+                    <div class="flex items-center justify-center">
         
                         <div>
-                          <p>Deadline</p>
+                          <p class="opacity-50">Deadline</p>
                            <p>21 March 2025</p>
                         </div>
             
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
+                        <div class="ml-1">
+                            <button onclick="increaseCounter(this)" class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl text-white">Completed</button>
                         </div> 
         
                     </div>
@@ -68,20 +109,19 @@
         
         
                 <!-- card 2 start -->
-                <div class="bg-green-300 rounded-xl ">
-                    <h3 class="">ShopEase</h3>
-                    <h1>Fix Mobile Button Issue </h1>
-                    <p class="">Debug using Chrome DevTools, check for overlapping </p>
-        
-                    <div class="flex ">
+                <div class="bg-[#F4F7FF] rounded-xl p-2 ">
+                    <h3 class="bg-white h-6 w-32 rounded-xl text-center mb-4">ShopEase</h3>
+                    <h1 class="mb-4">Fix Mobile Button Issue </h1>
+                    <p class="mb-4 bg-white w-3/4 rounded-xl p-2">Debug using Chrome DevTools, check for overlapping </p><br>
+                    <div class="flex items-center justify-center">
         
                         <div>
-                          <p>Deadline</p>
+                          <p class="opacity-50">Deadline</p>
                            <p>21 March 2025</p>
                         </div>
             
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
+                        <div class="ml-1">
+                            <button onclick="increaseCounter(this)" class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl text-white">Completed</button>
                         </div> 
         
                     </div>
@@ -91,20 +131,19 @@
                 <!-- card 2 end -->
         
                 <!-- card 3 start -->
-                <div class="bg-green-300 rounded-xl ">
-                    <h3 class="">ShopEase</h3>
-                    <h1>Fix Mobile Button Issue </h1>
-                    <p class="">Debug using Chrome DevTools, check for overlapping </p>
-        
-                    <div class="flex ">
+                <div class="bg-[#F4F7FF] rounded-xl p-2 ">
+                    <h3 class="bg-white h-6 w-32 rounded-xl text-center mb-4">ShopEase</h3>
+                    <h1 class="mb-4">Fix Mobile Button Issue </h1>
+                    <p class="mb-4 bg-white w-3/4 rounded-xl p-2">Debug using Chrome DevTools, check for overlapping </p><br>
+                    <div class="flex items-center justify-center">
         
                         <div>
-                          <p>Deadline</p>
+                          <p class="opacity-50">Deadline</p>
                            <p>21 March 2025</p>
                         </div>
             
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
+                        <div class="ml-1">
+                            <button onclick="increaseCounter(this)" class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl text-white">Completed</button>
                         </div> 
         
                     </div>
@@ -114,20 +153,19 @@
                 <!-- card 3 end -->
     
                 <!-- card 4 start -->
-                <div class="bg-green-300 rounded-xl ">
-                    <h3 class="">ShopEase</h3>
-                    <h1>Fix Mobile Button Issue </h1>
-                    <p class="">Debug using Chrome DevTools, check for overlapping </p>
-        
-                    <div class="flex ">
+                <div class="bg-[#F4F7FF] rounded-xl p-2 ">
+                    <h3 class="bg-white h-6 w-32 rounded-xl text-center mb-4">ShopEase</h3>
+                    <h1 class="mb-4">Fix Mobile Button Issue </h1>
+                    <p class="mb-4 bg-white w-3/4 rounded-xl p-2">Debug using Chrome DevTools, check for overlapping </p><br>
+                    <div class="flex items-center justify-center">
         
                         <div>
-                          <p>Deadline</p>
+                          <p class="opacity-50">Deadline</p>
                            <p>21 March 2025</p>
                         </div>
             
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
+                        <div class="ml-1">
+                            <button onclick="increaseCounter(this)" class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl text-white">Completed</button>
                         </div> 
         
                     </div>
@@ -137,20 +175,19 @@
                 <!-- card 4 end -->
     
                 <!-- card 5 start -->
-                <div class="bg-green-300 rounded-xl ">
-                    <h3 class="">ShopEase</h3>
-                    <h1>Fix Mobile Button Issue </h1>
-                    <p class="">Debug using Chrome DevTools, check for overlapping </p>
-        
-                    <div class="flex ">
+                <div class="bg-[#F4F7FF] rounded-xl p-2 ">
+                    <h3 class="bg-white h-6 w-32 rounded-xl text-center mb-4">ShopEase</h3>
+                    <h1 class="mb-4">Fix Mobile Button Issue </h1>
+                    <p class="mb-4 bg-white w-3/4 rounded-xl p-2">Debug using Chrome DevTools, check for overlapping </p><br>
+                    <div class="flex items-center justify-center">
         
                         <div>
-                          <p>Deadline</p>
+                          <p class="opacity-50">Deadline</p>
                            <p>21 March 2025</p>
                         </div>
             
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
+                        <div class="ml-1">
+                            <button onclick="increaseCounter(this)" class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl text-white">Completed</button>
                         </div> 
         
                     </div>
@@ -160,20 +197,19 @@
                 <!-- card 5 end -->
     
                 <!-- card 6 start -->
-                <div class="bg-green-300 rounded-xl ">
-                    <h3 class="">ShopEase</h3>
-                    <h1>Fix Mobile Button Issue </h1>
-                    <p class="">Debug using Chrome DevTools, check for overlapping </p>
-        
-                    <div class="flex ">
+                <div class="bg-[#F4F7FF] rounded-xl p-2 ">
+                    <h3 class="bg-white h-6 w-32 rounded-xl text-center mb-4">ShopEase</h3>
+                    <h1 class="mb-4">Fix Mobile Button Issue </h1>
+                    <p class="mb-4 bg-white w-3/4 rounded-xl p-2">Debug using Chrome DevTools, check for overlapping </p><br>
+                    <div class="flex items-center justify-center">
         
                         <div>
-                          <p>Deadline</p>
+                          <p class="opacity-50">Deadline</p>
                            <p>21 March 2025</p>
                         </div>
             
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
+                        <div class="ml-1">
+                            <button onclick="increaseCounter(this)" class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl text-white">Completed</button>
                         </div> 
         
                     </div>
@@ -182,28 +218,7 @@
                 </div>
                 <!-- card 6 end -->
 
-                <!-- card 7 start -->
-                <div class="bg-green-300 rounded-xl ">
-                    <h3 class="">ShopEase</h3>
-                    <h1>Fix Mobile Button Issue </h1>
-                    <p class="">Debug using Chrome DevTools, check for overlapping </p>
-        
-                    <div class="flex ">
-        
-                        <div>
-                          <p>Deadline</p>
-                           <p>21 March 2025</p>
-                        </div>
-            
-                        <div>
-                            <button class="bg-[rgb(55_82_253)] w-32 h-10 rounded-2xl">Completed</button>
-                        </div> 
-        
-                    </div>
-                    
-        
-                </div>
-                 <!-- card 7 end -->
+                
     
     
     
